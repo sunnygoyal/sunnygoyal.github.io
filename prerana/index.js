@@ -27,6 +27,12 @@ async function fetchFileList(folderId) {
         return cachedData[folderId];
     }
 
+    $("#image-list .card").remove();
+    if ($("#image-list .loader").length == 0) {
+        $("<div class=loader />").appendTo("#image-list");
+    }
+    currentRenderPath = null;
+
     let myRequest = new CancelSignal();
     activeRequest = myRequest;
 
@@ -178,9 +184,6 @@ function parseUrlHash() {
 }
 
 async function loadUIForUrl() {
-    $("#image-list .card, #image-list .loader").remove();
-    $("<div class=loader />").appendTo("#image-list");
-
     let hash = parseUrlHash();
     let root = await fetchFileList(ROOT_DIR);
     let currentData = root;
