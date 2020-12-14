@@ -85,8 +85,13 @@ loadImage("https://avatars.githubusercontent.com/u/672456?s=250").then(img => {
     clickRotate.duration = 550;
 
     let el = document.getElementById("title_icon");
-    el.addEventListener("mouseover", () => hoverRotate.setValue(0.5))
-    el.addEventListener("mouseout", () => hoverRotate.setValue(0))
+    el.addEventListener("touchstart", () => hoverRotate.setValue(0.5))
+    el.addEventListener("mouseenter", () => hoverRotate.setValue(0.5))
+
+    el.addEventListener("mouseleave", () => hoverRotate.setValue(0))
+    el.addEventListener("touchmove", () => hoverRotate.setValue(0))
+    el.addEventListener("click", () => hoverRotate.setValue(0))
+
     el.addEventListener("click", () => clickRotate.setValue(clickRotate._endValue + Math.PI));
     illo.updateRenderGraph();
 });
