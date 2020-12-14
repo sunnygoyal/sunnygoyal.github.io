@@ -1,17 +1,43 @@
 <html>
 <head>
     <title>Sunny Goyal</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="style/index.css" rel="stylesheet"></link>
+    <script src="script/zdog.dist.min.js"></script>
 </head>
- <body>
-     <h3>Page under construction</h3>
-     <p>
-         Sorry friends, my previous hosting plan expired, and they decided to change the subscription cost to
-         500% (new users still enjoy the cheaper plan). And they do not allow me to download the previous site
-         without renewing my plan.
-     </p>
-     <p>
-         So I have decided to abandon the previous site, and move to github. For the timebeing you can access most
-         of my work on <a href="https://github.com/sunnygoyal">github</a> and
-         <a href="https://play.google.com/store/apps/developer?id=Painless+Apps">play store</a>
-     </p>
- </body>
+<body>
+    <div class="main_wrapper">
+        <div class="header">
+            <div id="icon_holder">
+                <canvas id="title_icon"></canvas>
+                <!-- <img class="title_icon" src="https://avatars.githubusercontent.com/u/672456?s=130" /> -->
+            </div>
+            <span></span>
+            <h1 id="title">Sunny Goyal</h1>
+            <p id="header_summary">
+                I am a software engineer working on Android UI and like to ocassionally tinker with web development.
+                Check out some of my work at <a href="https://github.com/sunnygoyal">Github</a>
+                and <a href="https://play.google.com/store/apps/developer?id=Painless+Apps">Play Store</a> .
+            </p>
+        </div>
+
+
+    <h3>Recent Works</h3>
+
+    <div class="card-content">
+        <a class="work-card" href="https://google.github.io/web-hv/">
+            <img src="//google.github.io/web-hv/icon.png" />
+            <h3>Web HV</h3>
+            <p>A web based tool for inspecting UI of an in-development android app</p>
+        </a>
+        <a class="work-card" href="https://sunnygoyal.com/jade/">
+            <img src="//sunnygoyal.com/jade/icons/icon-128.png" />
+            <h3>Jade</h3>
+            <p>A web based GUI client for SQLite</p>
+        </a>
+    </div>
+
+</div>
+<script src="script/index.js"></script>
+
+</body>

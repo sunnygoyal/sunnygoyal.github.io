@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: rgb(241,246,255);
+    background: linear-gradient(0deg, rgba(241,246,255,1) 0%, rgba(240,243,255,1) 100%);
+}
+.main_wrapper {
+    width: calc(100% - 10px);
+    max-width: 800px;
+    margin: 20px auto;
+}
+.header {
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 1fr auto auto;
+}
+#icon_holder {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.2);
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+#title {
+    font-size: 1.8em;
+    padding-top: 0px;
+    margin: 0;
+}
+.header p {
+    color: #777;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+@media screen and (max-width: 600px) {
+    #header_summary {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #icon_holder {
+        grid-row-end: 3;
+    }
+    #title {
+        padding-bottom: 10px;
+    }
+}
+
+.header a {
+    display: inline-grid;
+    text-decoration: none;
+    color: #777;
+    padding: 0 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+    transition: all 250ms;
+}
+.header a:hover {
+    background-color: #666;
+    color: #FFF;
+}
+
+.card-content {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, 300px);
+    row-gap: 10px;
+    column-gap: 20px;
+}
+.work-card {
+    display: inline-grid;
+    width: 280px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 2px 1px rgba(50,50,50,0.2);
+    grid-template-columns: auto 1fr;
+    text-decoration: none;
+
+    background: rgb(155,158,162);
+    background: linear-gradient(150deg, rgba(209,215,222,0.3) 0%, rgba(55,59,73,0.1) 100%);
+    transition: all 250ms;
+}
+.work-card img {
+    width: 80px;
+    height: 80px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-right: 10px;
+}
+.work-card h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #333;
+}
+.work-card p {
+    margin: 0;
+    color: #666;
+}
+.work-card:hover {
+    box-shadow: 0 0 6px 2px rgba(50,50,50,0.3);
+}
